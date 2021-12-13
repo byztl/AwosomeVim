@@ -3,10 +3,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'preservim/nerdtree'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sainnhe/lightline_foobar.vim'
 Plug 'liuchengxu/space-vim-dark'
+"Plug 'flazz/vim-colorschemes'
+Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
@@ -122,17 +125,20 @@ set foldcolumn=1
 " Enable syntax highlighting
 syntax enable
 
-" Enable 256 colors palette in Gnome Terminal
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
-
-try
-    colorscheme desert
-catch
-endtry
-
 set background=dark
+
+let g:onedark_termcolors=256
+colorscheme onedark
+" Enable 256 colors palette in Gnome Terminal
+"if $COLORTERM == 'gnome-terminal'
+"    set t_Co=256
+"endif
+"
+"try
+"    colorscheme desert
+"catch
+"endtry
+
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -219,6 +225,7 @@ map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
+map <leader>tp :tabprevious<cr>
 map <leader>t<leader> :tabnext
 
 " Let 'tl' toggle between this and the last accessed tab
@@ -408,3 +415,4 @@ let g:airline_symbols.branch = '⎇'
 
 source ~/.vim/vimrcs/gutentags.vim
 source ~/.vim/vimrcs/leaderf.vim
+
