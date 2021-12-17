@@ -8,6 +8,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sainnhe/lightline_foobar.vim'
 Plug 'liuchengxu/space-vim-dark'
+Plug 'psliwka/vim-smoothie'
 "Plug 'flazz/vim-colorschemes'
 Plug 'joshdick/onedark.vim'
 
@@ -226,7 +227,7 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
 map <leader>tp :tabprevious<cr>
-map <leader>t<leader> :tabnext
+map <leader>t<leader> :tabnext<cr>
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
